@@ -8,6 +8,7 @@ import Pricing from './pages/Pricing';
 import PixversePage from './pages/PixversePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Chatbot from './components/Chatbot';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/affiliates" element={<Affiliates />} />
             <Route path="/pricing" element={<Pricing />} />
                             <Route path="/pixverse" element={<PixversePage />} />
+                    <Chatbot />
           </Routes>
         </main>
         <Footer />
