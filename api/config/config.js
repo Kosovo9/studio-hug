@@ -71,5 +71,12 @@ module.exports = {
   site: {
     url: process.env.SITE_URL || 'https://nexora-hug.com'
   }
+
+    // MercadoPago
+  mercadopago: {
+    accessToken: process.env.MERCADOPAGO_ACCESS_TOKEN,
+    publicKey: process.env.MERCADOPAGO_PUBLIC_KEY,
+    notificationUrl: `${process.env.SITE_URL}/api/webhooks/mercadopago`
+  },
 };
 
