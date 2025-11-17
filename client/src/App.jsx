@@ -1,37 +1,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Dashboard from './pages/Dashboard';
-import SpaceManager from './pages/SpaceManager';
-import Analytics from './pages/Analytics';
-import Settings from './pages/Settings';
-import Affiliates from './pages/Affiliates';
-import Pricing from './pages/Pricing';
-import PixversePage from './pages/PixversePage';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Chatbot from './components/Chatbot';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/spaces" element={<SpaceManager />} />
-            <Route path="/analytics" element={<Analytics />} />
-            <Route path="/settings" element={<Settings />} />
-            <Route path="/affiliates" element={<Affiliates />} />
-            <Route path="/pricing" element={<Pricing />} />
-                            <Route path="/pixverse" element={<PixversePage />} />
-                    <Chatbot />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <div className="min-h-screen bg-gray-950 text-white">
+          <nav className="bg-black/30 p-4 border-b border-purple-500/20">
+            <h1 className="text-2xl font-bold">NEXORA-HUG TEST</h1>
+          </nav>
+          <main className="container mx-auto p-8">
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
 export default App;
-
