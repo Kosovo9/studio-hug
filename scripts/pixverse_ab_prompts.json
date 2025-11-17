@@ -1,0 +1,50 @@
+{
+  "ab_testing": {
+    "enabled": true,
+    "test_ratio": 50,
+    "created_at": "2025-11-16T22:00:00Z",
+    "version": "1.0",
+    "status": "PRODUCTION_ACTIVE"
+  },
+  "models": [
+    {
+      "id": "model_a",
+      "name": "Model A - Romantic",
+      "gender": "Female",
+      "age": "28-32",
+      "hair": "Auburn wavy",
+      "eyes": "Warm brown, expressive",
+      "clothing": "Burgundy V-neck dress",
+      "expression": "Tender, loving smile"
+    },
+    {
+      "id": "model_b",
+      "name": "Model B - Confident",
+      "gender": "Male",
+      "age": "35-40",
+      "hair": "Dark brown, well-groomed",
+      "eyes": "Deep brown, confident",
+      "clothing": "Black formal suit, white shirt",
+      "expression": "Protective, loving smile"
+    }
+  ],
+  "pixverse_prompts": {
+    "variant_a": {
+      "test_id": "A",
+      "name": "Romantic Embrace - Golden Hour",
+      "prompt": "Create an ULTRA-REALISTIC, HYPER-DETAILED 4K VIDEO (4 seconds, 60fps) of TWO PEOPLE in an intimate, LOVING EMBRACE with IDENTICAL EXACT FACIAL EXPRESSIONS. Female: auburn wavy hair, warm brown eyes, delicate features, burgundy V-neck dress. Male: dark hair, strong masculine features, black suit + white shirt. CRITICAL: BOTH MUST HAVE IDENTICAL FACES EXPRESSIONS - EXACT SAME SMILE ANGLE, SAME EYE GAZE, IDENTICAL EYEBROW POSITION, SAME MUSCLE TENSION, IDENTICAL LIP CURVE. Perfect skin texture (pore-level detail), every hair strand visible, realistic fabric, professional museum-quality lighting. Golden hour backlighting, cinematic depth of field. ABSOLUTELY PHOTOREALISTIC, 1000% AUTHENTIC, ZERO DISTORTIONS, MATHEMATICAL MIRROR PERFECTION IN EVERY DETAIL."
+    },
+    "variant_b": {
+      "test_id": "B",
+      "name": "Professional Embrace - Studio",
+      "prompt": "Generate ABSOLUTELY PHOTOREALISTIC, HYPER-DETAILED 4K VIDEO of TWO PEOPLE in PROFESSIONAL INTIMATE EMBRACE. CRITICAL: IDENTICAL EXACT FACIAL EXPRESSIONS - same smile angle, same eye gaze, identical eyebrow position, same cheek tension, identical lip curve, same eyelid opening, PERFECT SYMMETRICAL EMOTIONAL MIRROR. Faces are MATHEMATICAL TWINS in expression and emotion."
+    }
+  },
+  "deployment_info": {
+    "integration_path": "/api/pixverse/embrace-ab-test",
+    "backend_service": "Railway (studio-hug-prod.up.railway.app)",
+    "frontend_url": "https://studio-nexora.com",
+    "cache_ttl": 3600,
+    "status": "ACTIVE"
+  }
+}
