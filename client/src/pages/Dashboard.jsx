@@ -30,20 +30,6 @@ export default function Dashboard() {
     <>
       <SEOHead locale="es-mx" />
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
-        <nav className="bg-black/30 backdrop-blur-xl border-b border-purple-500/20 p-4">
-          <div className="container mx-auto flex justify-between items-center">
-            <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              NEXORA-HUG 🚀
-            </h1>
-            <div className="flex gap-4">
-              <Link to="/spaces" className="text-white hover:text-purple-400">Spaces</Link>
-              <Link to="/analytics" className="text-white hover:text-purple-400">Analytics</Link>
-              <Link to="/affiliates" className="text-white hover:text-purple-400">Afiliados</Link>
-              <Link to="/settings" className="text-white hover:text-purple-400">Settings</Link>
-            </div>
-          </div>
-        </nav>
-
         <div className="container mx-auto p-8">
           {/* Stats Cards */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">

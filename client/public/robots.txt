@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nexora-hug.com/sitemap.xml
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+
+# Allow all pages
+Allow: /
+Allow: /spaces
+Allow: /analytics
+Allow: /pricing
+Allow: /affiliates
+
