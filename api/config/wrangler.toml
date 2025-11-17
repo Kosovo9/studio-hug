@@ -1,0 +1,64 @@
+api/config/config.jsrequire('dotenv').config();
+
+const config = {
+  pixverse: {
+    apiKey: process.env.PIXVERSE_API_KEY,
+    apiBaseUrl: process.env.PIXVERSE_API_BASE_URLname = "studio-hug-pixverse-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+route = "https://api.studio-hug.com/pixverse/*"
+zone_id = "your_zone_id"
+env = "production"
+
+[env.staging]
+route = "https://staging-api.studio-hug.com/pixverse/*"
+zone_id = "your_zone_id"
+env = "staging"
+
+[build]
+command = "npm install && npm run build"
+
+[build.upload]
+format = "modules"
+main = "./src/index.js"
+
+[[triggers.crons]]
+cron = "0 */6 * * *" || 'https://api.pixverse.ai/v1',
+    model: 'v4.5',
+    videoDuration: 6,
+    videoQuality: '720p',
+    timeout: 300000,
+    pollInterval: 2000,
+    maxPolls: 150,
+  },
+  currency: {
+    latam: { code: 'MXN', price: 249, countries: ['MX','AR','CO','PE','CL','EC','BO','PY','UY','VE'] },
+    euCa: { code: 'USD', price: 20, countries: ['US','CA','GB','IE','FR','DE','IT','ES','PT','NL','BE','AT','CH','SE','NO','DK','FI','PL'] },
+    default: { code: 'USD', price: 20 },
+  },
+  geoip: {
+    cacheTTL: 3600,
+    cloudflareEnabled: true,
+    vpnDetectionEnabled: true,
+  },
+  upload: {
+    maxSize: 20971520,
+    formats: ['jpg', 'jpeg', 'png', 'webp'],
+  },
+  video: {
+    watermarkEnabled: true,
+    watermarkText: 'PremiumHug.ai',
+  },
+  cache: {
+    ttl: 3600,
+    ipCacheTTL: 3600,
+  },
+  server: {
+    port: process.env.PORT || 3000,
+    nodeEnv: process.env.NODE_ENV || 'development',
+  },
+};
+
+module.exports = config;
