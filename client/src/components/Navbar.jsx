@@ -11,6 +11,7 @@ export default function Navbar() {
     { path: '/affiliates', label: 'Afiliados', icon: '💰' },
     { path: '/pricing', label: 'Pricing', icon: '💎' },
     { path: '/settings', label: 'Settings', icon: '⚙️' }
+     { path: '/pixverse', label: 'Generate Video', icon: '🎬' },
   ];
 
   return (
