@@ -1,6 +1,5 @@
 {
   "name": "nexora-hug-client",
-// Fix: Pantalla negra en Vercel - completo - Vercel Output Directory: dist, SPA routing con vercel.json, ErrorBoundary, 6 premium pages  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
