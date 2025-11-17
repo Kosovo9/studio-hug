@@ -5,6 +5,7 @@ import Analytics from './pages/Analytics';
 import Settings from './pages/Settings';
 import Affiliates from './pages/Affiliates';
 import Pricing from './pages/Pricing';
+import PixversePage from './pages/PixversePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/affiliates" element={<Affiliates />} />
             <Route path="/pricing" element={<Pricing />} />
+                            <Route path="/pixverse" element={<PixversePage />} />
           </Routes>
         </main>
         <Footer />
