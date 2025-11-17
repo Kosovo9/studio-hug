@@ -1,3 +1,5 @@
+// Este archivo es legacy - usar api/index.js en su lugar
+// Mantenido para compatibilidad
 require('dotenv').config();
 const express = require('express');
 const { HfInference } = require('@huggingface/inference');
