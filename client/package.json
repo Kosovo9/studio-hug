@@ -1,5 +1,6 @@
 {
   "name": "nexora-hug-client",
+  // Premium UI v1.0 - All 6 pages deployed with animations, gradients, and responsive design
   "version": "1.0.0",
   "scripts": {
     "dev": "vite",
