@@ -1,21 +1,28 @@
 {
   "name": "nexora-hug",
   "version": "1.0.0",
-  "description": "Sistema automático de monetización con Hugging Face",
-  "main": "index.js",
+  "description": "Sistema automático de monetización con Hugging Face - Meta $30K MXN/mes",
+  "main": "api/index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node api/index.js",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:client\"",
+    "dev:api": "cd api && nodemon index.js",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "install:all": "npm install && cd api && npm install && cd ../client && npm install"
   },
+  "keywords": [
+    "huggingface",
+    "monetization",
+    "ai",
+    "spaces"
+  ],
+  "author": "Nexora Team",
+  "license": "MIT",
   "dependencies": {
-    "@huggingface/hub": "^0.15.1",
-    "express": "^4.18.2",
-    "dotenv": "^16.3.1",
-    "axios": "^1.6.0",
-    "simple-git": "^3.20.0"
+    "concurrently": "^8.2.2"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }
-
